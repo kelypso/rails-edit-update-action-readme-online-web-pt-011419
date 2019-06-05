@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
   # patch 'articles/:id', to: 'articles#update'
-  # ^ will give the same routes, but with a more appropriate PATCH route for update rather than PUT
+  # ^ should give the same routes, with a more appropriate PATCH route for update rather than PUT
   
   resources :articles, only: [:index, :show, :new, :create, :edit, :update]
   
