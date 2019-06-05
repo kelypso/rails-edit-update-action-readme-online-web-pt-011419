@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
-  patch 'articles/:id', to: 'articles#update'
+  # get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
+  # patch 'articles/:id', to: 'articles#update'
+  # ^ should give the same routes, with a more appropriate PATCH route for update rather than PUT
   
-  # resources :articles, only: [:index, :show, :new, :create, :edit, :update]
-  # ^ gives the same routes, along with PUT route for update rather than PATCH
+  resources :articles, only: [:index, :show, :new, :create, :edit, :update]
   
 end
